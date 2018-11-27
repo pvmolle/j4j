@@ -512,12 +512,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_inleidende_oefening">Inleidende oefening</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
+<div class="paragraph">
 <p>Maak een klasse <code>ArrayOefeningen</code> aan, die de volgende <code>main</code> methode bevat.</p>
-</li>
-</ol>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -532,6 +528,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 		<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Minimum: &quot;</span> <span class="tok-o">+</span> <span class="tok-n">min</span><span class="tok-o">(</span><span class="tok-n">cijfers</span><span class="tok-o">));</span>
 		<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Maximum: &quot;</span> <span class="tok-o">+</span> <span class="tok-n">max</span><span class="tok-o">(</span><span class="tok-n">cijfers</span><span class="tok-o">));</span>
 		<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Gemiddelde: &quot;</span> <span class="tok-o">+</span> <span class="tok-n">gemiddelde</span><span class="tok-o">(</span><span class="tok-n">cijfers</span><span class="tok-o">));</span>
+
+		<span class="tok-c1">// Verder aanvullen...</span>
 	<span class="tok-o">}</span>
 <span class="tok-o">}</span></code></pre>
 </div>
@@ -566,9 +564,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>Het gemiddelde: <code>gemiddelde</code>.</p>
 </li>
-<li>
-<p>De mediaan: <code>mediaan</code>.</p>
-</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -581,13 +576,34 @@ Maximum: 32.0
 Gemiddelde: 14.625</pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Schrijf de statische methode <code>deelSommen</code>. Deze neemt twee argumenten, namelijk de array waarop de deelsommen berekent worden, en een geheel getal <code>n</code>, dat voorstelt uit hoeveel getallen een deelsom wordt opgebouwd. Deze methode splitst de originale array op in gelijke delen van grootte <code>n</code>, en berekent hiervan telkens de som. Het resultaat bestaat uit een array van deze deelsommen.</p>
+</div>
+<div class="paragraph">
+<p>Vul de <code>main</code> methode verder aan, zodat de deelsommen voor <code>n = {1, 2, 4}</code> worden weergegeven.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Deelsommen voor n=1: 117.0
+Deelsommen voor n=2: 50.0, 67.0
+Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Schrijf de statische methode <code>filterEven</code>. Deze neemt als enige argument de array waaruit we de even vetallen wensen te filteren. Het resultaat is een nieuwe array, die enkel de even getallen uit de originele array bevat.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Even getallen: 24.0, 4.0, 32.0, 12.0, 8.0</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-11-26 01:41:54 +0100
+Last updated 2018-11-27 23:25:47 +0100
 </div>
 </div>
 </body>
