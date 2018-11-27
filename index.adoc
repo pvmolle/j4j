@@ -1,0 +1,70 @@
+= Java oefeningen
+:icons: font
+:source-language: java
+:source-highlighter: pygments
+:pygments-style: friendly
+
+== Arrays
+
+=== Inleidende oefening
+
+Maak een klasse `ArrayOefeningen` aan, die de volgende `main` methode bevat.
+
+[source]
+----
+public class ArrayOefeningen {
+
+	// Zelf aanvullen...
+
+	public static void main(String[] args) {
+		double[] cijfers = new double[] {
+				24.0, 21.0, 1.0, 4.0, 32.0, 12.0, 15.0, 8.0 };
+
+		System.out.println("Minimum: " + min(cijfers));
+		System.out.println("Maximum: " + max(cijfers));
+		System.out.println("Gemiddelde: " + gemiddelde(cijfers));
+
+		// Verder aanvullen...
+	}
+}
+----
+
+Schrijf de verwachte *statische* methodes, die enkele statistieken van een array weergeven.
+
+[NOTE]
+====
+Een statische methode wordt gedefinieerd met het keyword `static`, bijvoorbeeld
+
+[source]
+----
+private static int max(int a, int b);
+----
+
+====
+
+- De kleinste en grootste waarde uit de array: `min` en `max`.
+- Het gemiddelde: `gemiddelde`.
+
+De verwachte output is de volgende:
+
+----
+Minimum: 1.0
+Maximum: 32.0
+Gemiddelde: 14.625
+----
+
+Schrijf de statische methode `deelSommen`. Deze neemt twee argumenten, namelijk de array waarop de deelsommen worden berekend, en een geheel getal `n`, dat voorstelt uit hoeveel getallen een deelsom wordt opgebouwd. Deze methode splitst de originale array op in gelijke delen van grootte `n`, en berekent hiervan telkens de som. Het resultaat bestaat uit een array van deze deelsommen.
+
+Vul de `main` methode verder aan, zodat de deelsommen voor `n = {1, 2, 4}` worden weergegeven.
+
+----
+Deelsommen voor n=1: 117.0
+Deelsommen voor n=2: 50.0, 67.0
+Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0
+----
+
+Schrijf de statische methode `filterEven`. Deze neemt als enige argument de array waaruit we de even vetallen wensen te filteren. Het resultaat is een nieuwe array, die enkel de even getallen uit de originele array bevat.
+
+----
+Even getallen: 24.0, 4.0, 32.0, 12.0, 8.0
+----
