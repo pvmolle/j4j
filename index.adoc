@@ -63,7 +63,7 @@ Deelsommen voor n=2: 50.0, 67.0
 Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0
 ----
 
-Schrijf de statische methode `filterEven`. Deze neemt als enige argument de array waaruit we de even vetallen wensen te filteren. Het resultaat is een nieuwe array, die enkel de even getallen uit de originele array bevat.
+Schrijf de statische methode `filterEven`. Deze neemt als enige argument de array waaruit we de even getallen wensen te filteren. Het resultaat is een nieuwe array, die enkel de even getallen uit de originele array bevat.
 
 ----
 Even getallen: 24.0, 4.0, 32.0, 12.0, 8.0
