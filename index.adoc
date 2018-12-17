@@ -79,6 +79,6 @@ Deze methode geeft een nieuwe array terug, die de getallen onder (of boven) de g
 
 ----
 Getallen groter dan 20.0: 24.0, 32.0
-Getallen kleiner 10.0: 1.0, 4.0, 8.0
+Getallen kleiner dan 10.0: 1.0, 4.0, 8.0
 Getallen tussen 8.0 (exclusief) en 18.0 (exclusief): 12.0, 15.0
 ----
