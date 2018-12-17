@@ -68,3 +68,17 @@ Schrijf de statische methode `filterEven`. Deze neemt als enige argument de arra
 ----
 Even getallen: 24.0, 4.0, 32.0, 12.0, 8.0
 ----
+
+Schrijf, analoog aan de methode `filterEven`, de methode `filterMetGrens`. Deze neemt drie argumenten, namelijk
+
+1. de array waaruit we wensen te filteren,
+2. de grens, die ofwel een bovengrens, ofwel een ondergrens zal zijn, afhankelijk van,
+3. een _boolean_ `isOnderGrens`, die aangeeft of de grens al dan niet een ondergrens is.
+
+Deze methode geeft een nieuwe array terug, die de getallen onder (of boven) de grens bevat, exclusief de grens. Gebruik *uitsluitend* deze methode om de volgende output toe te voegen aan je `main` methode:
+
+----
+Getallen groter dan 20.0: 24.0, 32.0
+Getallen kleiner 10.0: 1.0, 4.0, 8.0
+Getallen tussen 8.0 (exclusief) en 18.0 (exclusief): 12.0, 15.0
+----
