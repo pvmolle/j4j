@@ -619,9 +619,114 @@ Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0</pre>
 <div class="listingblock">
 <div class="content">
 <pre>Getallen groter dan 20.0: 24.0, 32.0
-Getallen kleiner 10.0: 1.0, 4.0, 8.0
+Getallen kleiner dan 10.0: 1.0, 4.0, 8.0
 Getallen tussen 8.0 (exclusief) en 18.0 (exclusief): 12.0, 15.0</pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_een_eigen_containerklasse">Een eigen containerklasse</h3>
+<div class="paragraph">
+<p>De Java-bibliotheek bevat standaard enkele containers. Eén daarvan is <code>ArrayList</code>, die een lijst met variabele lengte implementeert. In deze oefening schrijven we onze eigen implementatie voor deze container.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>De containertypes binnen de Java-bibliotheek zijn <strong>generiek</strong> geprogrammeerd, waardoor ze werken met alle types. Zo kan je een lijst van <em>integers</em> initialiseren met <code>ArrayList&lt;int&gt;</code>. Analoog wordt een lijst van <em>doubles</em> aangemaakt via <code>ArrayList&lt;double&gt;</code>. Bij onze eigen implementatie beperken we ons echter tot een containerklasse die <em>integers</em> kan opslaan.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Start een nieuw project, met daarin de volgende klassen (in het default package):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>De klasse <code>Main</code>. Deze zal uitsluitend de <code>main</code> methode bevatten.</p>
+</li>
+<li>
+<p>De klasse <code>IntLijst</code>. Deze zal de implementatie bevatten van onze lijstklasse.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Hoewel wordt afgeraden om klassen rechtstreeks te definiëren in het default package, zullen we dit in deze oefeningen toch doen, om zo consequent te zijn met de cursus. Dit laat eveneens toe om de volledige broncode te kopiëren en plakken in Dodona.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Implementeer voor de klasse <code>IntLijst</code> de volgende methodes, en test deze zelf <strong>kritisch</strong> uit in de <code>main</code> methode:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Een default constructor. Deze initialiseert een lege lijst.</p>
+</li>
+<li>
+<p>Een niet-default constructor, die als argument een array van <em>integers</em> heeft. Aan de hand van deze array wordt de lijst geïnitialiseerd.</p>
+</li>
+<li>
+<p>De methode <code>voegToe</code>. Deze heeft een <em>integer</em> als argument, en voegt deze achteraan de lijst toe.</p>
+</li>
+<li>
+<p>De methode <code>verwijder</code>, met een <em>integer</em> als argument. Indien dit getal voorkomt in de lijst, dan verwijdert deze methode het eerste voorkomen van dit getal.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Naast een oefening op arrays, is dit vooral een denkoefening. Alvorens je echt aan het coderen gaat, stel je best een mentale roadmap op. Bedenk hoe je binnen jouw lijstimplementatie een reeks getallen zal opslaan. Logische bewerkingen op deze lijst zijn een getal toevoegen en een getal verwijderen. Een naïeve manier om dit te implementeren zou de volgende kunnen zijn:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Begin met een lege array van <em>integers</em>.</p>
+</li>
+<li>
+<p>Bij elke toevoeging, maak een nieuwe array die exact één element meer bevat dan de originele; kopieer vervolgens alle elementen uit de originele array naar de nieuwe, en plaats het toe te voegen element achteraan deze nieuwe array.</p>
+</li>
+<li>
+<p>De verwijdering loopt analoog aan de toevoeging, behalve dat je nu een array maakt die één element minder bevat dan de originele. Deze nieuwe array zal alle elementen uit de oude array bevatten, op het te verwijderen element na.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Aangezien een array aanmaken, en vooral het kopiëren van alle getallen een dure operatie is, is deze manier van werken zeker niet de meest optimale. Als pure programmeeroefening kan je de methode <code>voegToe</code> en <code>verwijder</code> eerst op deze manier implementeren, maar nadien is het aangeraden om deze op een andere, meer efficiente manier te implementeren. Bedenk zelf hoe je dit zou doen.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>De methode <code>maakLeeg</code> maakt de volledige lijst leeg.</p>
+</li>
+<li>
+<p>De methode <code>verwijderAlle</code> heeft een <em>integer</em> als argument, en verwijdert alle voorkomens van dit getal uit de lijst.</p>
+</li>
+<li>
+<p>De methode <code>reverse</code> draait de lijst om.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -629,7 +734,7 @@ Getallen tussen 8.0 (exclusief) en 18.0 (exclusief): 12.0, 15.0</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-12-17 23:59:22 +0100
+Last updated 2018-12-18 15:30:28 +0100
 </div>
 </div>
 </body>
