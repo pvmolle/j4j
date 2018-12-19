@@ -137,6 +137,17 @@ System.out.println(countMulti(waarden, new int[] { 1, 5 }));    // 4
 System.out.println(countMulti(waarden, new int[] { 2, 3, 4 })); // 13
 ----
 
+==== Palindroom
+
+Een array is een palindroom wanneer het dezelfde getallen bevat van voor naar achter, als van achter naar voor (analoog aan het woord "lepel"). Schrijf de methode `isPalindroom` die voor een array van _integers_ nagaat of deze een palindroom is.
+
+[source]
+----
+System.out.println(isPalindroom(new int[] { 1, 2, 3, 4 }));    // false
+System.out.println(isPalindroom(new int[] { 1, 2, 2, 1 }));    // true
+System.out.println(isPalindroom(new int[] { 7, 5, 6, 5, 7 })); // true
+----
+
 === Een eigen containerklasse
 
 De Java-bibliotheek bevat standaard enkele containers. Eén daarvan is `ArrayList`, die een lijst met variabele lengte implementeert. In deze oefening schrijven we onze eigen implementatie voor deze container.
