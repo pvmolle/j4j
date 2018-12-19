@@ -84,7 +84,7 @@ System.out.println("Prijs: " + berekenPrijs(dagVerbruik, 11.0, 4.0)); // Prijs: 
 
 In een productiebedrijf hangen twee monitoren. De eerste monitor meet het cumulatieve verbruik, terwijl de tweede het aantal pieken telt.
 
-Schrijf de methode `monitorVerbruik`. Deze heeft twee argumenten, namelijk een array die het verbruik van de dag weergeeft, en een _double_ die een grens voorstelt. Het resultaat van deze functie is het uur waarna het totale verbruik van die dag de grens overschreidt. Indien de grens nooit wordt overschreden, geeft deze methode `-1` terug.
+Schrijf de methode `monitorVerbruik`. Deze heeft twee argumenten, namelijk een array die het verbruik van de dag weergeeft, en een _double_ die een grens voorstelt. Het resultaat van deze methode is het uur waarna het totale verbruik van die dag de grens overschreidt. Indien de grens nooit wordt overschreden, geeft deze methode `-1` terug.
 
 [source]
 ----
@@ -126,7 +126,7 @@ Schrijf de methode `countMulti`. Deze methode heeft twee argumenten, namelijk de
 
 [TIP]
 ====
-Los deze oefening op aan de hand van een ingebouwde functie.
+Los deze oefening op aan de hand van een ingebouwde methode.
 ====
 
 [source]
@@ -146,6 +146,28 @@ Een array is een palindroom wanneer het dezelfde getallen bevat van voor naar ac
 System.out.println(isPalindroom(new int[] { 1, 2, 3, 4 }));    // false
 System.out.println(isPalindroom(new int[] { 1, 2, 2, 1 }));    // true
 System.out.println(isPalindroom(new int[] { 7, 5, 6, 5, 7 })); // true
+----
+
+==== Driehoeken
+
+Schrijf de methode `soortDriehoek`. Deze heeft één argument, namelijk een array van _integers_. Deze zal steeds drie elementen bevatten, die de hoeken van een driehoek voorstellen. De methode geeft een geheel getal terug, dat voorstelt om welk type driehoek het gaat.
+
+|===
+| Type | Waarde
+
+| Ongeldige driehoek | -1
+| Gelijkzijdige driehoek | 2
+| Gelijkbenige driehoek | 1
+| Willekeurige driehoek | 0
+|===
+
+[source]
+----
+System.out.println(soortDriehoek(new int[] { 100, 10, 30 })); // -1
+System.out.println(soortDriehoek(new int[] { 235, 14, 92 })); // -1
+System.out.println(soortDriehoek(new int[] { 60, 60, 60 }));  // 2
+System.out.println(soortDriehoek(new int[] { 80, 80, 20 }));  // 1
+System.out.println(soortDriehoek(new int[] { 50, 60, 70 }));  // 0
 ----
 
 === Een eigen containerklasse
