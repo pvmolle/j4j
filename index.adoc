@@ -120,6 +120,23 @@ System.out.println(isGesorteerd(b, false)); // false
 System.out.println(isGesorteerd(c, false)); // true
 ----
 
+==== Aantallen
+
+Schrijf de methode `countMulti`. Deze methode heeft twee argumenten, namelijk de _integer_ array waarin we gaan tellen, en een tweede array van waarden die we willen tellen. Deze methode geeft terug hoe vaak deze waarden voorkomen in de eerste array.
+
+[TIP]
+====
+Los deze oefening op aan de hand van een ingebouwde functie.
+====
+
+[source]
+----
+int[] waarden = new int[] { 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5 };
+
+System.out.println(countMulti(waarden, new int[] { 1, 5 }));    // 4
+System.out.println(countMulti(waarden, new int[] { 2, 3, 4 })); // 13
+----
+
 === Een eigen containerklasse
 
 De Java-bibliotheek bevat standaard enkele containers. Eén daarvan is `ArrayList`, die een lijst met variabele lengte implementeert. In deze oefening schrijven we onze eigen implementatie voor deze container.

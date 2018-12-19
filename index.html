@@ -657,6 +657,34 @@ Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0</pre>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_aantallen">Aantallen</h4>
+<div class="paragraph">
+<p>Schrijf de methode <code>countMulti</code>. Deze methode heeft twee argumenten, namelijk de <em>integer</em> array waarin we gaan tellen, en een tweede array van waarden die we willen tellen. Deze methode geeft terug hoe vaak deze waarden voorkomen in de eerste array.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Los deze oefening op aan de hand van een ingebouwde functie.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span></span><span class="tok-kt">int</span><span class="tok-o">[]</span> <span class="tok-n">waarden</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-kt">int</span><span class="tok-o">[]</span> <span class="tok-o">{</span> <span class="tok-mi">1</span><span class="tok-o">,</span> <span class="tok-mi">1</span><span class="tok-o">,</span> <span class="tok-mi">1</span><span class="tok-o">,</span> <span class="tok-mi">2</span><span class="tok-o">,</span> <span class="tok-mi">2</span><span class="tok-o">,</span> <span class="tok-mi">2</span><span class="tok-o">,</span> <span class="tok-mi">2</span><span class="tok-o">,</span> <span class="tok-mi">2</span><span class="tok-o">,</span> <span class="tok-mi">3</span><span class="tok-o">,</span> <span class="tok-mi">3</span><span class="tok-o">,</span> <span class="tok-mi">3</span><span class="tok-o">,</span> <span class="tok-mi">3</span><span class="tok-o">,</span> <span class="tok-mi">4</span><span class="tok-o">,</span> <span class="tok-mi">4</span><span class="tok-o">,</span> <span class="tok-mi">4</span><span class="tok-o">,</span> <span class="tok-mi">4</span><span class="tok-o">,</span> <span class="tok-mi">5</span> <span class="tok-o">};</span>
+
+<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-n">countMulti</span><span class="tok-o">(</span><span class="tok-n">waarden</span><span class="tok-o">,</span> <span class="tok-k">new</span> <span class="tok-kt">int</span><span class="tok-o">[]</span> <span class="tok-o">{</span> <span class="tok-mi">1</span><span class="tok-o">,</span> <span class="tok-mi">5</span> <span class="tok-o">}));</span>    <span class="tok-c1">// 4</span>
+<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-n">countMulti</span><span class="tok-o">(</span><span class="tok-n">waarden</span><span class="tok-o">,</span> <span class="tok-k">new</span> <span class="tok-kt">int</span><span class="tok-o">[]</span> <span class="tok-o">{</span> <span class="tok-mi">2</span><span class="tok-o">,</span> <span class="tok-mi">3</span><span class="tok-o">,</span> <span class="tok-mi">4</span> <span class="tok-o">}));</span> <span class="tok-c1">// 13</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_een_eigen_containerklasse">Een eigen containerklasse</h3>
@@ -768,7 +796,7 @@ Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-12-19 12:24:33 +0100
+Last updated 2018-12-19 13:48:48 +0100
 </div>
 </div>
 </body>
