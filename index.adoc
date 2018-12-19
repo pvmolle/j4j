@@ -63,24 +63,42 @@ Deelsommen voor n=2: 50.0, 67.0
 Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0
 ----
 
-Schrijf de statische methode `filterEven`. Deze neemt als enige argument de array waaruit we de even getallen wensen te filteren. Het resultaat is een nieuwe array, die enkel de even getallen uit de originele array bevat.
+=== Verdere oefeningen
 
+In een nieuw project, maak de klasse `VerdereOefeningen` aan, met daarin een `main` methode. Elke oefening binnen dit onderdeel dien je te implementeren als statische methode binnen deze klasse (eventueel aangevuld met eigen hulpmethodes).
+
+==== Energierekening
+
+Het verbruik (in kW) van een hele dag wordt in een array opgeslaan, waarbij elk element het verbruik van een bepaald uur van de dag voorstelt (het element op positie 0 staat voor het verbruik van 0u tot 1u, het element op positie 1 voor het verbruik van 1u tot 2u, etc.).
+
+Schrijf de methode `berekenPrijs`, die de energieprijs voor een gegeven dag berekent. Deze methode heeft drie argumenten, namelijk een array die het verbruik van een dag voorstelt, een _double_, die het dagtarief per uur voorstelt, en een _double_ die het nachttarief per uur voorstelt. Het nachttarief wordt toegepast van 22u tot 6u.
+
+Test deze methode uit in je `main` methode.
+
+[source]
 ----
-Even getallen: 24.0, 4.0, 32.0, 12.0, 8.0
+double[] dagVerbruik = new double[] { 8.8, 2.43, 7.67, 9.87, 7.08, 3.44, 6.98, 4.9, 7.54, 2.27, 8.77, 8.12, 2.73, 2.52, 7.45, 2.05, 8.85, 6.3, 4.69, 5.96, 3.53, 6.85, 3.63, 9.77 };
+
+System.out.println("Prijs: " + berekenPrijs(dagVerbruik)); // Prijs: 1195.37
 ----
 
-Schrijf, analoog aan de methode `filterEven`, de methode `filterMetGrens`. Deze neemt drie argumenten, namelijk
+In een productiebedrijf hangen twee monitoren. De eerste monitor meet het cumulatieve verbruik, terwijl de tweede het aantal pieken telt.
 
-1. de array waaruit we wensen te filteren,
-2. de grens, die ofwel een bovengrens, ofwel een ondergrens zal zijn, afhankelijk van,
-3. een _boolean_ `isOnderGrens`, die aangeeft of de grens al dan niet een ondergrens is.
+Schrijf de methode `monitorVerbruik`. Deze heeft twee argumenten, namelijk een array die het verbruik van de dag weergeeft, en een _double_ die een grens voorstelt. Het resultaat van deze functie is het uur waarna het totale verbruik van die dag de grens overschreidt. Indien de grens nooit wordt overschreden, geeft deze methode `-1` terug.
 
-Deze methode geeft een nieuwe array terug, die de getallen onder (of boven) de grens bevat, exclusief de grens. Gebruik *uitsluitend* deze methode om de volgende output toe te voegen aan je `main` methode:
-
+[source]
 ----
-Getallen groter dan 20.0: 24.0, 32.0
-Getallen kleiner dan 10.0: 1.0, 4.0, 8.0
-Getallen tussen 8.0 (exclusief) en 18.0 (exclusief): 12.0, 15.0
+System.out.println(monitorVerbruik(dagVerbruik, 20.0))    // 3
+System.out.println(monitorVerbruik(dagVerbruik, 100.0))   // 16
+System.out.println(monitorVerbruik(dagVerbruik, 10000.0)) // -1
+----
+
+Schrijf de methode `monitorPiek`. Analoog aan de vorige methode heeft deze twee argumenten. Ditmaal stelt het tweede argument een piekgrens voor. Het resultaat van deze methode is het aantal uren waarbij het verbruik hoger was dan deze piekgrens.
+
+[source]
+----
+System.out.println(monitorPiek(dagVerbruik, 7.0)) // 7
+System.out.println(monitorPiek(dagVerbruik, 9.0)) // 2
 ----
 
 === Een eigen containerklasse
