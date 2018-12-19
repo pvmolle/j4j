@@ -101,6 +101,25 @@ System.out.println(monitorPiek(dagVerbruik, 7.0)) // 7
 System.out.println(monitorPiek(dagVerbruik, 9.0)) // 2
 ----
 
+==== Volgorde controleren
+
+Schrijf de methode `isGesorteerd`. Deze methode heeft twee argumenten, namelijk de array die we wensen te controleren, een een _boolean_ `oplopend`. Deze methode gaat na of een array oplopend, dan wel aflopend, is gesorteerd.
+
+[source]
+----
+double[] a = new double[] { 41.09, 4.94, 18.77, 41.84, 5.6, 49.49, 61.57, 74.91, 17.47, 13.82 };
+double[] b = new double[] { 4.94, 5.6, 13.82, 17.47, 18.77, 41.09, 41.84, 49.49, 61.57, 74.91 };
+double[] c = new double[] { 74.91, 61.57, 49.49, 41.84, 41.09, 18.77, 17.47, 13.82, 5.6, 4.94 };
+
+System.out.println(isGesorteerd(a, true));  // false
+System.out.println(isGesorteerd(a, false)); // false
+
+System.out.println(isGesorteerd(b, true));  // true
+System.out.println(isGesorteerd(b, false)); // false
+
+System.out.println(isGesorteerd(c, false)); // true
+----
+
 === Een eigen containerklasse
 
 De Java-bibliotheek bevat standaard enkele containers. Eén daarvan is `ArrayList`, die een lijst met variabele lengte implementeert. In deze oefening schrijven we onze eigen implementatie voor deze container.

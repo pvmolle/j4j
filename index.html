@@ -636,6 +636,27 @@ Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0</pre>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_volgorde_controleren">Volgorde controleren</h4>
+<div class="paragraph">
+<p>Schrijf de methode <code>isGesorteerd</code>. Deze methode heeft twee argumenten, namelijk de array die we wensen te controleren, een een <em>boolean</em> <code>oplopend</code>. Deze methode gaat na of een array oplopend, dan wel aflopend, is gesorteerd.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span></span><span class="tok-kt">double</span><span class="tok-o">[]</span> <span class="tok-n">a</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-kt">double</span><span class="tok-o">[]</span> <span class="tok-o">{</span> <span class="tok-mf">41.09</span><span class="tok-o">,</span> <span class="tok-mf">4.94</span><span class="tok-o">,</span> <span class="tok-mf">18.77</span><span class="tok-o">,</span> <span class="tok-mf">41.84</span><span class="tok-o">,</span> <span class="tok-mf">5.6</span><span class="tok-o">,</span> <span class="tok-mf">49.49</span><span class="tok-o">,</span> <span class="tok-mf">61.57</span><span class="tok-o">,</span> <span class="tok-mf">74.91</span><span class="tok-o">,</span> <span class="tok-mf">17.47</span><span class="tok-o">,</span> <span class="tok-mf">13.82</span> <span class="tok-o">};</span>
+<span class="tok-kt">double</span><span class="tok-o">[]</span> <span class="tok-n">b</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-kt">double</span><span class="tok-o">[]</span> <span class="tok-o">{</span> <span class="tok-mf">4.94</span><span class="tok-o">,</span> <span class="tok-mf">5.6</span><span class="tok-o">,</span> <span class="tok-mf">13.82</span><span class="tok-o">,</span> <span class="tok-mf">17.47</span><span class="tok-o">,</span> <span class="tok-mf">18.77</span><span class="tok-o">,</span> <span class="tok-mf">41.09</span><span class="tok-o">,</span> <span class="tok-mf">41.84</span><span class="tok-o">,</span> <span class="tok-mf">49.49</span><span class="tok-o">,</span> <span class="tok-mf">61.57</span><span class="tok-o">,</span> <span class="tok-mf">74.91</span> <span class="tok-o">};</span>
+<span class="tok-kt">double</span><span class="tok-o">[]</span> <span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-kt">double</span><span class="tok-o">[]</span> <span class="tok-o">{</span> <span class="tok-mf">74.91</span><span class="tok-o">,</span> <span class="tok-mf">61.57</span><span class="tok-o">,</span> <span class="tok-mf">49.49</span><span class="tok-o">,</span> <span class="tok-mf">41.84</span><span class="tok-o">,</span> <span class="tok-mf">41.09</span><span class="tok-o">,</span> <span class="tok-mf">18.77</span><span class="tok-o">,</span> <span class="tok-mf">17.47</span><span class="tok-o">,</span> <span class="tok-mf">13.82</span><span class="tok-o">,</span> <span class="tok-mf">5.6</span><span class="tok-o">,</span> <span class="tok-mf">4.94</span> <span class="tok-o">};</span>
+
+<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-n">isGesorteerd</span><span class="tok-o">(</span><span class="tok-n">a</span><span class="tok-o">,</span> <span class="tok-kc">true</span><span class="tok-o">));</span>  <span class="tok-c1">// false</span>
+<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-n">isGesorteerd</span><span class="tok-o">(</span><span class="tok-n">a</span><span class="tok-o">,</span> <span class="tok-kc">false</span><span class="tok-o">));</span> <span class="tok-c1">// false</span>
+
+<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-n">isGesorteerd</span><span class="tok-o">(</span><span class="tok-n">b</span><span class="tok-o">,</span> <span class="tok-kc">true</span><span class="tok-o">));</span>  <span class="tok-c1">// true</span>
+<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-n">isGesorteerd</span><span class="tok-o">(</span><span class="tok-n">b</span><span class="tok-o">,</span> <span class="tok-kc">false</span><span class="tok-o">));</span> <span class="tok-c1">// false</span>
+
+<span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-n">isGesorteerd</span><span class="tok-o">(</span><span class="tok-n">c</span><span class="tok-o">,</span> <span class="tok-kc">false</span><span class="tok-o">));</span> <span class="tok-c1">// true</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_een_eigen_containerklasse">Een eigen containerklasse</h3>
@@ -747,7 +768,7 @@ Deelsommen voor n=4: 45.0, 5.0, 44.0, 23.0</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-12-19 11:26:50 +0100
+Last updated 2018-12-19 11:47:34 +0100
 </div>
 </div>
 </body>
