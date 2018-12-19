@@ -79,7 +79,7 @@ Test deze methode uit in je `main` methode.
 ----
 double[] dagVerbruik = new double[] { 8.8, 2.43, 7.67, 9.87, 7.08, 3.44, 6.98, 4.9, 7.54, 2.27, 8.77, 8.12, 2.73, 2.52, 7.45, 2.05, 8.85, 6.3, 4.69, 5.96, 3.53, 6.85, 3.63, 9.77 };
 
-System.out.println("Prijs: " + berekenPrijs(dagVerbruik)); // Prijs: 1195.37
+System.out.println("Prijs: " + berekenPrijs(dagVerbruik, 11.0, 4.0)); // Prijs: 1195.37
 ----
 
 In een productiebedrijf hangen twee monitoren. De eerste monitor meet het cumulatieve verbruik, terwijl de tweede het aantal pieken telt.
