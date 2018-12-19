@@ -97,7 +97,7 @@ Schrijf de methode `monitorPiek`. Analoog aan de vorige methode heeft deze twee 
 
 [source]
 ----
-System.out.println(monitorPiek(dagVerbruik, 7.0)) // 7
+System.out.println(monitorPiek(dagVerbruik, 7.0)) // 10
 System.out.println(monitorPiek(dagVerbruik, 9.0)) // 2
 ----
 
